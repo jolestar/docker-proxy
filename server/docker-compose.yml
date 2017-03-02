@@ -1,0 +1,8 @@
+Squid:
+  image: jolestar/proxy-server
+  ports:
+    - "5000:5000"
+  volumes:
+    - /srv/docker/proxy-server/cache:/var/spool/squid
+    - /srv/docker/proxy-server/cert:/etc/stunnel/cert
+  restart: always
